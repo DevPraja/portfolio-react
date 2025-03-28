@@ -193,9 +193,9 @@ const Portfolio = () => {
           <option value="borrower">Borrower Name</option>
           <option value="amount">Amount</option>
         </select>
-        <button className="reset-btn" onClick={() => window.location.reload()}>
+        {/* <button className="reset-btn" onClick={() => window.location.reload()}>
           Reset
-        </button>
+        </button> */}
 
         <div className="more-filters">
           <button
