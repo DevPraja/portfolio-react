@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Portfolio Management Table – Documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Overview
+This React project displays a portfolio of loan records in a structured table format in a portfolio option in sidebar. Users can filter, sort, and add new loan records via a pop-up form. The project utilizes React Table for efficient data handling and UI components.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+# Project Structure
 
-### `npm start`
+/PortfolioApp  
+│── /src
+│   ├── /components
+│   │   ├── Sidebar.js
+│   │   ├── Sidebar.css
+│   │   ├── Table.js
+│   ├── /pages
+│   │   ├── Portfolio.js
+│   │   ├── Portfolio.css
+│   │   ├── Dashboard.js
+│   │   ├── Notifications.js
+│   │   ├── Notices.js
+│   │   ├── Auction.js
+│   │   ├── DataUpload.js
+│   │   ├── ControlPanel.js
+│   │   ├── UserManagement.js
+│   │   ├── Permissions.js
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│── package.json
+│── README.md
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 1. Portfolio.js (Main Component)
+This is the core component that:
+- Displays a table of loan records.
+- Implements filtering, sorting, and search functionality.
+- Provides an "Upload" button that opens a form to add new loan records.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 2. Portfolio.css (Styling)
+Contains styles for:
+- The table layout.
+- Form pop-up (modal).
+- Buttons and filters.
 
-### `npm test`
+# 3. App.js (Main App Entry)
+Imports and renders the Portfolio component.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 4. index.js (Root File)
+Mounts the React app to the DOM.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Libraries & Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 1. React.js
+- Core framework for building UI components.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 2. @tanstack/react-table (React Table)
+- Efficiently handles tabular data.
+- Provides sorting, filtering, and row management.
 
-### `npm run eject`
+# 3. CSS (Styling)
+- Custom styles for form layout and table appearance.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Key Features & Functionality
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# 1. Data Handling
+- Loan records are stored in the useState hook.
+- New records can be added dynamically.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# 2. Filtering & Sorting
+- A search bar filters loans by Loan No, Borrower Name, or Amount.
+- Sort buttons organize records based on Amount, Region, or Loan Type.
 
-## Learn More
+# 3. Upload Feature (Modal Form)
+- A form pops up when the user clicks the "Upload" button.
+- Form fields are structured in a two-column layout.
+- Upon submission, the new loan is added to the table.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## How It Works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. The user enters a search term to filter records.
+2. The "More Filters" button provides sorting options.
+3. Clicking "Upload" opens a form modal.
+4. The user fills in the form and clicks "Submit," adding a new loan entry.
+5. Clicking "Reset" reloads the page.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Conclusion
+This project is a simple React-based table management system with search, sorting, and an upload form. It efficiently handles data using React Table while keeping the UI responsive and user-friendly.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Deploy Link
+https://devpraja.github.iyo/portfolio-react/
